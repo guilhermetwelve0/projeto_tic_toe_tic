@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        let player = 'X';
+        function makeMove(cell) {
+            if (cell.innerHTML === '') {
+                cell.innerHTML = player;
+                if (player === 'X') {
+                    player = 'O';
+                } else {
+                    player = 'X';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table onclick="makeMove(event.target)">
+        <tr><td></td><td></td><td></td></tr> 
+        <tr><td></td><td></td><td></td></tr> 
+        <tr><td></td><td></td><td></td> </tr> 
+    </table> 
+</body> 
+</html> 
